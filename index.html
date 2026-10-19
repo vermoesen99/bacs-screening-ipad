@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BACS-screening Vlaanderen</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#16232a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="BACS-screening">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+<div class="brand"><b>BACS-screening</b><span class="badge-kw">&gt; 290 kW</span><span>Vlaanderen · niet-residentieel</span></div>
+<nav class="nav" aria-label="Hoofdmenu"><button data-act="nav" data-view="lijst">Dossiers</button><button data-act="nav" data-view="beheer">Beheer</button><button data-act="nav" data-view="bronnen">Regels en bronnen</button></nav>
+</div></header>
+<main id="main"></main>
+<div id="updatebar" class="updatebar" role="status" hidden><span>Nieuwe versie beschikbaar.</span><button class="btn sm">Herladen</button></div>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+<script src="src/config.js"></script>
+<script src="src/engine.js"></script>
+<script src="src/sample-data.js"></script>
+<script src="src/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "bacs-screening",
+  "version": "1.0.0",
+  "description": "BACS-screening- en adviesapplicatie voor niet-residentiële gebouwen in Vlaanderen",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "build": "node scripts/build.js",
+    "examples": "node scripts/generate-examples.js",
+    "start": "node scripts/serve.js"
+  },
+  "license": "UNLICENSED"
+}

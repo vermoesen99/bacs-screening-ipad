@@ -1,0 +1,108 @@
+{
+  "id": "voorbeeld-wzc",
+  "voorbeeld": true,
+  "modus": "snel",
+  "status": "afgerond",
+  "aangemaakt": "2026-09-22T08:00:00.000Z",
+  "gewijzigd": "2026-09-22T12:00:00.000Z",
+  "klant": {
+    "naam": "vzw Zorg Voorbeeld (fictief)",
+    "contactpersoon": "Sara Wouters"
+  },
+  "site": {
+    "naam": "Woonzorgcentrum Hof ten Voorbeeld",
+    "adres": "Zorglaan 5, 9997 Voorbeeldberg"
+  },
+  "bezoek": {
+    "datum": "2026-09-22",
+    "adviseur": "Voorbeeldadviseur"
+  },
+  "opmerkingen": "Onder 290 kW, maar boven 70 kW.",
+  "gebouwen": [
+    {
+      "id": "g1",
+      "naam": "Woonzorgcentrum",
+      "type": "Woonzorgcentrum",
+      "bouwjaar": "2008",
+      "oppervlakte": "2600",
+      "geklimatiseerdeOppervlakte": "2300",
+      "nieuwBestaand": "bestaand",
+      "nietResidentieel": "ja",
+      "eigenaarGebouw": "vzw Zorg Voorbeeld",
+      "eigenaarInstallaties": "Energiedienstenbedrijf (ESCO-contract)",
+      "gebruiker": "vzw Zorg Voorbeeld",
+      "heeftRuimteverwarming": "ja",
+      "heeftRuimtekoeling": "ja",
+      "heeftVentilatie": "ja",
+      "uitzondering": {
+        "ingeroepen": false,
+        "bijlagen": []
+      },
+      "bijzondereSituaties": "Installaties in eigendom van ESCO: verplichting ligt vermoedelijk bij de ESCO."
+    }
+  ],
+  "structuur": [],
+  "groepen": [
+    {
+      "id": "hg1",
+      "soort": "verwarming",
+      "naam": "Ketels",
+      "gebouwIds": [
+        "g1"
+      ]
+    }
+  ],
+  "verwarming": [
+    {
+      "id": "v1",
+      "naam": "Ketel 1",
+      "type": "Gasketel",
+      "vermogenKW": "120",
+      "hoofdverwarming": "ja",
+      "gebouwId": "g1",
+      "gekoppeld": "ja",
+      "groepId": "hg1",
+      "energiedrager": "Aardgas"
+    },
+    {
+      "id": "v2",
+      "naam": "Ketel 2",
+      "type": "Gasketel",
+      "vermogenKW": "120",
+      "hoofdverwarming": "ja",
+      "gebouwId": "g1",
+      "gekoppeld": "ja",
+      "groepId": "hg1",
+      "energiedrager": "Aardgas"
+    }
+  ],
+  "koeling": [
+    {
+      "id": "k1",
+      "naam": "Koelmachine",
+      "type": "Luchtgekoelde koelmachine (chiller)",
+      "vermogenKW": "85",
+      "gebouwId": "g1",
+      "gekoppeld": "nee",
+      "groepId": ""
+    }
+  ],
+  "snelleChecklist": {
+    "Q1": "ja",
+    "Q2": "ja",
+    "Q3": "ja",
+    "Q4": "onbekend",
+    "Q5": "ja",
+    "Q6": "ja",
+    "Q7": "deels",
+    "Q8": "deels",
+    "Q9": "ja",
+    "Q10": "nvt",
+    "Q11": "ja",
+    "Q12": "deels"
+  },
+  "screening": {
+    "methode": "m1",
+    "items": {}
+  }
+}

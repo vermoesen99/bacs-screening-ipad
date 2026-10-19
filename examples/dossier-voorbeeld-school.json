@@ -1,0 +1,325 @@
+{
+  "id": "voorbeeld-school",
+  "voorbeeld": true,
+  "modus": "diep",
+  "status": "concept",
+  "aangemaakt": "2026-10-12T09:00:00.000Z",
+  "gewijzigd": "2026-10-12T11:30:00.000Z",
+  "klant": {
+    "naam": "Gemeente Voorbeeldegem (fictief)",
+    "contactpersoon": "An Peeters, technische dienst",
+    "contactEmail": "technische.dienst@voorbeeldegem.example",
+    "contactTel": ""
+  },
+  "site": {
+    "naam": "Basisschool De Linde (voorbeeld)",
+    "adres": "Schoolstraat 1, 9999 Voorbeeldegem"
+  },
+  "bezoek": {
+    "datum": "2026-10-12",
+    "adviseur": "Voorbeeldadviseur"
+  },
+  "opmerkingen": "Werkvoorbeeld uit de opdracht. Ketels in cascade op één collector.",
+  "gebouwen": [
+    {
+      "id": "g1",
+      "naam": "Hoofdgebouw",
+      "type": "School",
+      "bouwjaar": "1978",
+      "oppervlakte": "3200",
+      "geklimatiseerdeOppervlakte": "2900",
+      "nieuwBestaand": "bestaand",
+      "nietResidentieel": "ja",
+      "eigenaarGebouw": "Gemeente Voorbeeldegem",
+      "eigenaarInstallaties": "Gemeente Voorbeeldegem",
+      "gebruiker": "Schoolbestuur De Linde",
+      "heeftRuimteverwarming": "ja",
+      "heeftRuimtekoeling": "ja",
+      "heeftVentilatie": "ja",
+      "uitzondering": {
+        "ingeroepen": false,
+        "typeId": "",
+        "motivatie": "",
+        "bewijs": "",
+        "bijlagen": []
+      },
+      "bijzondereSituaties": "",
+      "opmerkingen": ""
+    }
+  ],
+  "structuur": [
+    {
+      "id": "s1",
+      "soort": "stookplaats",
+      "naam": "Stookplaats kelder",
+      "gebouwId": "g1",
+      "opmerkingen": "Gemeenschappelijke collector"
+    },
+    {
+      "id": "s2",
+      "soort": "koelcentrale",
+      "naam": "Dak – koelmachine",
+      "gebouwId": "g1",
+      "opmerkingen": "Bedient enkel het ICT-lokaal en de turnzaal"
+    },
+    {
+      "id": "s3",
+      "soort": "zone",
+      "naam": "Klaslokalen vleugel A",
+      "gebouwId": "g1",
+      "opmerkingen": ""
+    }
+  ],
+  "groepen": [
+    {
+      "id": "hg1",
+      "soort": "verwarming",
+      "naam": "Ketelgroep stookplaats kelder",
+      "gebouwIds": [
+        "g1"
+      ],
+      "locatieId": "s1",
+      "beschrijving": "Ketel 1 en 2 hydraulisch gekoppeld via collector"
+    },
+    {
+      "id": "kg1",
+      "soort": "koeling",
+      "naam": "Koelkring dak",
+      "gebouwIds": [
+        "g1"
+      ],
+      "locatieId": "s2",
+      "beschrijving": "Eén koelmachine, geen andere gekoppelde koelinstallatie"
+    }
+  ],
+  "verwarming": [
+    {
+      "id": "v1",
+      "naam": "Ketel 1",
+      "type": "Gasketel",
+      "fabrikant": "Voorbeeldmerk",
+      "model": "CondensPro 180",
+      "bouwjaar": "2012",
+      "energiedrager": "Aardgas",
+      "vermogenKW": "180",
+      "hoofdverwarming": "ja",
+      "centraalLokaal": "centraal",
+      "gebouwId": "g1",
+      "locatieId": "s1",
+      "gekoppeld": "ja",
+      "groepId": "hg1",
+      "ventilatie": "nee",
+      "regelsysteem": "Cascaderegelaar ketelfabrikant",
+      "protocol": "Modbus RTU",
+      "meetpunten": "Aanvoer-/retourtemperatuur",
+      "storingsinfo": "Storingscodes op display",
+      "bijlagen": [],
+      "opmerkingen": ""
+    },
+    {
+      "id": "v2",
+      "naam": "Ketel 2",
+      "type": "Gasketel",
+      "fabrikant": "Voorbeeldmerk",
+      "model": "CondensPro 180",
+      "bouwjaar": "2012",
+      "energiedrager": "Aardgas",
+      "vermogenKW": "180",
+      "hoofdverwarming": "ja",
+      "centraalLokaal": "centraal",
+      "gebouwId": "g1",
+      "locatieId": "s1",
+      "gekoppeld": "ja",
+      "groepId": "hg1",
+      "ventilatie": "nee",
+      "regelsysteem": "Cascaderegelaar ketelfabrikant",
+      "protocol": "Modbus RTU",
+      "meetpunten": "Aanvoer-/retourtemperatuur",
+      "storingsinfo": "Storingscodes op display",
+      "bijlagen": [],
+      "opmerkingen": ""
+    }
+  ],
+  "koeling": [
+    {
+      "id": "k1",
+      "naam": "Koelmachine 1",
+      "type": "Luchtgekoelde koelmachine (chiller)",
+      "fabrikant": "Voorbeeldkoeling",
+      "model": "AirChill 90",
+      "bouwjaar": "2016",
+      "vermogenKW": "90",
+      "centraalLokaal": "centraal",
+      "gebouwId": "g1",
+      "locatieId": "s2",
+      "gekoppeld": "nee",
+      "groepId": "kg1",
+      "ventilatie": "nee",
+      "regelsysteem": "Eigen regelaar",
+      "protocol": "Fabrikantspecifiek",
+      "meetpunten": "Geen",
+      "storingsinfo": "Alarmrelais",
+      "bijlagen": [],
+      "opmerkingen": ""
+    }
+  ],
+  "snelleChecklist": {
+    "Q1": "deels",
+    "Q2": "nee",
+    "Q3": "nee",
+    "Q4": "onbekend",
+    "Q5": "deels",
+    "Q6": "nee",
+    "Q7": "nee",
+    "Q8": "deels",
+    "Q9": "onbekend",
+    "Q10": "nvt",
+    "Q11": "deels",
+    "Q12": "nee"
+  },
+  "screening": {
+    "methode": "m1",
+    "aantalIAQSensoren": "4",
+    "items": {
+      "A1": {
+        "status": "ja",
+        "bewijs": "Digitale hoofdmeter met datalogger netbeheerder",
+        "opmerking": ""
+      },
+      "A2": {
+        "status": "nvt",
+        "bewijs": "",
+        "opmerking": "Geen injectie: geen eigen productie aanwezig."
+      },
+      "A3": {
+        "status": "nvt",
+        "bewijs": "",
+        "opmerking": "Geen PV of WKK."
+      },
+      "A4": {
+        "status": "nvt",
+        "bewijs": "",
+        "opmerking": "Geen elektrische centrale opwekker."
+      },
+      "A5": {
+        "status": "ja",
+        "bewijs": "Hoofdgasmeter met pulsuitgang",
+        "opmerking": ""
+      },
+      "A6": {
+        "status": "nvt",
+        "bewijs": "",
+        "opmerking": "Eén stookplaats."
+      },
+      "A7": {
+        "status": "nvt",
+        "bewijs": "",
+        "opmerking": "Enkel aardgas."
+      },
+      "A8": {
+        "status": "nvt",
+        "bewijs": "",
+        "opmerking": "Geen warmtenet."
+      },
+      "A9": {
+        "status": "onbekend",
+        "bewijs": "",
+        "opmerking": "Meterspecificaties opvragen."
+      },
+      "A10": {
+        "status": "nee",
+        "bewijs": "",
+        "opmerking": "Alleen maandelijkse manuele aflezing."
+      },
+      "A11": {
+        "status": "nee",
+        "bewijs": "",
+        "opmerking": ""
+      },
+      "A12": {
+        "status": "nee",
+        "bewijs": "",
+        "opmerking": ""
+      },
+      "B1": {
+        "status": "deels",
+        "bewijs": "",
+        "opmerking": "Ketels via Modbus op cascaderegelaar; koelmachine niet gekoppeld."
+      },
+      "B2": {
+        "status": "deels",
+        "bewijs": "",
+        "opmerking": ""
+      },
+      "B3": {
+        "status": "nee",
+        "bewijs": "",
+        "opmerking": ""
+      },
+      "B4": {
+        "status": "nee",
+        "bewijs": "",
+        "opmerking": ""
+      },
+      "C1": {
+        "status": "nee"
+      },
+      "C2": {
+        "status": "nee"
+      },
+      "C3": {
+        "status": "nee"
+      },
+      "C4": {
+        "status": "nee"
+      },
+      "D1": {
+        "status": "deels",
+        "bewijs": "",
+        "opmerking": "Storingscodes zichtbaar, geen rendementsbewaking."
+      },
+      "D2": {
+        "status": "ja",
+        "bewijs": "Weersafhankelijke cascaderegeling",
+        "opmerking": ""
+      },
+      "D3": {
+        "status": "onbekend",
+        "bewijs": "",
+        "opmerking": "Turnzaal heeft radiatoren én koeling: nagaan."
+      },
+      "E1": {
+        "status": "nvt",
+        "bewijs": "",
+        "opmerking": "Geen hernieuwbare productie of restwarmte."
+      },
+      "F1": {
+        "status": "deels",
+        "bewijs": "",
+        "opmerking": "Detectie in sanitair en gangen, niet in klassen."
+      },
+      "G1": {
+        "status": "deels",
+        "bewijs": "",
+        "opmerking": "Kamerthermostaten in 4 zones."
+      },
+      "G2": {
+        "status": "nee"
+      },
+      "G3": {
+        "status": "nee"
+      },
+      "G4": {
+        "status": "nee",
+        "bewijs": "",
+        "opmerking": "4 meetpunten t.o.v. 29 vereist."
+      },
+      "G5": {
+        "status": "nee"
+      },
+      "G6": {
+        "status": "nee"
+      }
+    }
+  }
+}

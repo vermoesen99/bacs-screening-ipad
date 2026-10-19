@@ -1,0 +1,188 @@
+{
+  "id": "voorbeeld-gemeentehuis",
+  "voorbeeld": true,
+  "modus": "snel",
+  "status": "concept",
+  "aangemaakt": "2026-10-05T08:00:00.000Z",
+  "gewijzigd": "2026-10-05T10:00:00.000Z",
+  "klant": {
+    "naam": "Stad Voorbeeldstad (fictief)",
+    "contactpersoon": "Jan Claes",
+    "contactEmail": "",
+    "contactTel": ""
+  },
+  "site": {
+    "naam": "Administratief centrum (voorbeeld)",
+    "adres": "Markt 10, 9998 Voorbeeldstad"
+  },
+  "bezoek": {
+    "datum": "2026-10-05",
+    "adviseur": "Voorbeeldadviseur"
+  },
+  "opmerkingen": "Twee gebouwen. Koppeling van de ketel in het annexgebouw is nog niet bevestigd.",
+  "gebouwen": [
+    {
+      "id": "g1",
+      "naam": "Stadhuis",
+      "type": "Gemeentehuis",
+      "bouwjaar": "1995",
+      "oppervlakte": "4800",
+      "geklimatiseerdeOppervlakte": "4200",
+      "nieuwBestaand": "bestaand",
+      "nietResidentieel": "ja",
+      "eigenaarGebouw": "Stad Voorbeeldstad",
+      "eigenaarInstallaties": "Stad Voorbeeldstad",
+      "gebruiker": "Stadsdiensten",
+      "heeftRuimteverwarming": "ja",
+      "heeftRuimtekoeling": "ja",
+      "heeftVentilatie": "ja",
+      "uitzondering": {
+        "ingeroepen": false,
+        "bijlagen": []
+      },
+      "bijzondereSituaties": ""
+    },
+    {
+      "id": "g2",
+      "naam": "Annex",
+      "type": "Administratief centrum",
+      "bouwjaar": "",
+      "oppervlakte": "900",
+      "geklimatiseerdeOppervlakte": "",
+      "nieuwBestaand": "bestaand",
+      "nietResidentieel": "ja",
+      "eigenaarGebouw": "Stad Voorbeeldstad",
+      "eigenaarInstallaties": "",
+      "gebruiker": "OCMW",
+      "heeftRuimteverwarming": "ja",
+      "heeftRuimtekoeling": "nee",
+      "heeftVentilatie": "onbekend",
+      "uitzondering": {
+        "ingeroepen": false,
+        "bijlagen": []
+      },
+      "bijzondereSituaties": "Annex wordt mogelijk afgebroken in 2028."
+    }
+  ],
+  "structuur": [
+    {
+      "id": "s1",
+      "soort": "stookplaats",
+      "naam": "Stookplaats stadhuis",
+      "gebouwId": "g1"
+    },
+    {
+      "id": "s2",
+      "soort": "stookplaats",
+      "naam": "Stookplaats annex",
+      "gebouwId": "g2"
+    }
+  ],
+  "groepen": [
+    {
+      "id": "hg1",
+      "soort": "verwarming",
+      "naam": "Ketelgroep stadhuis",
+      "gebouwIds": [
+        "g1"
+      ],
+      "locatieId": "s1"
+    },
+    {
+      "id": "kg1",
+      "soort": "koeling",
+      "naam": "VRF stadhuis",
+      "gebouwIds": [
+        "g1"
+      ]
+    }
+  ],
+  "verwarming": [
+    {
+      "id": "v1",
+      "naam": "Ketel A",
+      "type": "Gasketel",
+      "vermogenKW": "250",
+      "hoofdverwarming": "ja",
+      "centraalLokaal": "centraal",
+      "gebouwId": "g1",
+      "gekoppeld": "ja",
+      "groepId": "hg1",
+      "energiedrager": "Aardgas"
+    },
+    {
+      "id": "v2",
+      "naam": "Warmtepomp A",
+      "type": "Warmtepomp",
+      "vermogenKW": "60",
+      "hoofdverwarming": "ja",
+      "centraalLokaal": "centraal",
+      "gebouwId": "g1",
+      "gekoppeld": "ja",
+      "groepId": "hg1",
+      "energiedrager": "Elektriciteit"
+    },
+    {
+      "id": "v3",
+      "naam": "Ketel annex",
+      "type": "Gasketel",
+      "vermogenKW": "",
+      "hoofdverwarming": "ja",
+      "centraalLokaal": "centraal",
+      "gebouwId": "g2",
+      "gekoppeld": "onbekend",
+      "groepId": "",
+      "energiedrager": "Aardgas"
+    }
+  ],
+  "koeling": [
+    {
+      "id": "k1",
+      "naam": "VRF buitenunit 1",
+      "type": "VRF/VRV-systeem",
+      "vermogenKW": "56",
+      "centraalLokaal": "centraal",
+      "gebouwId": "g1",
+      "gekoppeld": "ja",
+      "groepId": "kg1"
+    },
+    {
+      "id": "k2",
+      "naam": "VRF buitenunit 2",
+      "type": "VRF/VRV-systeem",
+      "vermogenKW": "56",
+      "centraalLokaal": "centraal",
+      "gebouwId": "g1",
+      "gekoppeld": "ja",
+      "groepId": "kg1"
+    },
+    {
+      "id": "k3",
+      "naam": "Split serverlokaal",
+      "type": "Split-/multisplitsysteem",
+      "vermogenKW": "7,1",
+      "centraalLokaal": "lokaal",
+      "gebouwId": "g1",
+      "gekoppeld": "nee",
+      "groepId": ""
+    }
+  ],
+  "snelleChecklist": {
+    "Q1": "ja",
+    "Q2": "deels",
+    "Q3": "nee",
+    "Q4": "onbekend",
+    "Q5": "ja",
+    "Q6": "deels",
+    "Q7": "nee",
+    "Q8": "onbekend",
+    "Q9": "ja",
+    "Q10": "nvt",
+    "Q11": "deels",
+    "Q12": "deels"
+  },
+  "screening": {
+    "methode": "m1",
+    "items": {}
+  }
+}
